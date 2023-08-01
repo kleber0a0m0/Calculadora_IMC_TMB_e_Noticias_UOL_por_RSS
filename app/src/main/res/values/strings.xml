@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculadora IMC - Turma C</string>
+    <string name="calculadora_imc">Calculadora IMC</string>
+    <string name="calcular">Calcular</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+</resources>
