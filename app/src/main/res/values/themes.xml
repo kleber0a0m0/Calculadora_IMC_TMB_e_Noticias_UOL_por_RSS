@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.CalculadoraIMCTurmaC" parent="Base.Theme.CalculadoraIMCTurmaC" />
+
+    <style name="Theme.DialogCustomizada" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>

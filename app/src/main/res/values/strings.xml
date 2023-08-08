@@ -4,4 +4,6 @@
     <string name="calcular">Calcular</string>
     <string name="peso">Peso</string>
     <string name="altura">Altura</string>
+    <string name="sobre_o_imc">O IMC (Índice de Massa Corporal) é uma medida que estima a relação entre a massa corporal (peso) e a altura de uma pessoa. Ele é usado para avaliar se um indivíduo está abaixo do peso, com peso saudável, com sobrepeso ou obeso, com base em uma faixa de valores pré-definidos.\n\nA classificação típica do IMC é a seguinte:</string>
+    <string name="_16"><![CDATA[< 16]]></string>
 </resources>
