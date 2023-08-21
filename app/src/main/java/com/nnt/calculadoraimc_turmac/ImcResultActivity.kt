@@ -4,29 +4,31 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
-import com.nnt.calculadoraimc_turmac.databinding.ActivityResultBinding
+import com.nnt.calculadoraimc_turmac.databinding.ActivityImcResultBinding
+import com.nnt.calculadoraimc_turmac.databinding.DialogImcInfoBinding
 import java.text.DecimalFormat
 
-class ResultActivity : AppCompatActivity() {
+class ImcResultActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityResultBinding
+    private lateinit var binding: ActivityImcResultBinding
     private lateinit var alertDialog: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityResultBinding.inflate(layoutInflater)
+        binding = ActivityImcResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val imc = intent.getDoubleExtra("imc", 0.0)
         binding.textViewImc.text = DecimalFormat("#.##").format(imc).replace(".", ",")
 
         binding.botaoVoltar.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, ImcActivity::class.java))
             finish()
         }
 
-        binding.botaoInfo.setOnClickListener { dialog() }
+        binding.botaoInfo.setOnClickListener { imcInfo() }
 
         when {
             imc < 16 -> {
@@ -89,9 +91,27 @@ class ResultActivity : AppCompatActivity() {
             alertDialog.dismiss()
         }
         builder.setNeutralButton("Menu Inicial") {_, _ ->
-            Intent(applicationContext, MainActivity::class.java)
+            Intent(applicationContext, ImcActivity::class.java)
             finish()
         }
+        alertDialog = builder.create()
+        alertDialog.show()
+    }
+
+    private fun imcInfo() {
+        val builder = AlertDialog.Builder(this, R.style.Theme_DialogCustomizada)
+        val dialogBinding : DialogImcInfoBinding = DialogImcInfoBinding.inflate(LayoutInflater.from(this))
+        builder.setView(dialogBinding.root)
+
+        dialogBinding.buttonMenu.setOnClickListener{
+            val intent = Intent(applicationContext, ImcActivity::class.java)
+            startActivity(intent)
+        }
+
+        dialogBinding.buttonVoltar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
         alertDialog = builder.create()
         alertDialog.show()
     }
