@@ -11,13 +11,13 @@
         android:id="@+id/textView3"
         style="@style/TituloRoxo"
         android:text="Calculadora TMB"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonVoltar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonInfo"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonVoltar"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonVoltar" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonVoltar"
         style="@style/BotaoRoxo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +25,7 @@
         android:contentDescription="Voltar"/>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButtonInfo"
         style="@style/BotaoRoxo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +37,7 @@
         style="@style/TextoRoxo"
         android:text="Sexo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonVoltar" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
@@ -47,18 +47,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:singleSelection="true"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
+
         <com.google.android.material.chip.Chip
+            android:id="@+id/chipMasculino"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:text="Masculino"
+            android:layout_marginEnd="4dp"
             android:checked="true"
-            android:layout_marginEnd="4dp"/>
+            android:text="Masculino" />
+
         <com.google.android.material.chip.Chip
+            android:id="@+id/chipFeminino"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:text="Feminino"/>
+            android:text="Feminino" />
     </com.google.android.material.chip.ChipGroup>
 
     <TextView
@@ -79,7 +83,8 @@
             android:id="@+id/seekbarIdade"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:max="150"/>
         <TextView
             android:id="@+id/textViewIdade"
             style="@style/texto_2"
@@ -105,12 +110,13 @@
             android:id="@+id/seekbarAltura"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:max="250"/>
         <TextView
             android:id="@+id/textViewAltura"
             style="@style/texto_2"
             android:layout_weight="1"
-            android:text="0"/>
+            android:text="0" />
     </LinearLayout>
 
     <TextView
@@ -128,10 +134,11 @@
         android:layout_marginVertical="8sp"
         app:layout_constraintTop_toBottomOf="@+id/peso">
         <SeekBar
-            android:id="@+id/seekbarAPeso"
+            android:id="@+id/seekbarPeso"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="5"/>
+            android:layout_weight="5"
+            android:max="25000"/>
         <TextView
             android:id="@+id/textViewPeso"
             style="@style/texto_2"
@@ -140,22 +147,22 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/teste"
+        android:id="@+id/buttonCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Teste"
+        android:text="@string/calcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutPeso" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewTeste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="Teste da seekbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teste" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcular" />
 </androidx.constraintlayout.widget.ConstraintLayout>
