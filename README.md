@@ -14,11 +14,11 @@ O aplicativo permite aos usuários calcular sua Taxa Metabólica Basal (TMB) com
 
 ### Notícias do UOL Esportes
 
-O aplicativo também exibe as últimas notícias do UOL Esportes usando um feed RSS. Ele faz o parsing do XML do feed, extraindo os títulos e links das notícias, e exibe em uma lista.
+O aplicativo também exibe as últimas notícias do UOL Esportes usando um feed RSS. Ele faz o parsing do XML do feed, extraindo os títulos e links das notícias, e exibe em uma lista, é possível clicar no card e ver a notícia completa no navegador.
 
 ### Imagens:
 
-
+![1 (1)](https://github.com/kleber0a0m0/Calculadora_IMC_TMB_e_Noticias_UOL_por_RSS/assets/116971675/058ea2e3-5930-41d0-a786-24815be48e1a)
 
 ## Como Usar
 
