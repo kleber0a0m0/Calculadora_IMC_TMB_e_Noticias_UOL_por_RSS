@@ -21,5 +21,9 @@ class MainActivity : AppCompatActivity() {
         binding.buttonTMB.setOnClickListener {
             startActivity(Intent(this, TMBActivity::class.java))
         }
+
+        binding.buttonNoticias.setOnClickListener {
+            startActivity(Intent(this, NoticiasActivity::class.java))
+        }
     }
 }
