@@ -1,4 +1,4 @@
-# Calculadora IMC e Metabolismo Basal
+# Calculadora IMC, Metabolismo Basal e Notícias do UOL
 
 Este é um aplicativo Android simples que permite calcular o Índice de Massa Corporal (IMC) e a Taxa Metabólica Basal (TMB), além de exibir notícias do UOL Esportes usando um feed RSS.
 
